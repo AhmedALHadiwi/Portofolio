@@ -13,7 +13,6 @@ const Certificate = ({ ImgSertif }) => {
 	const handleClose = () => {
 		setOpen(false)
 	}
-
 	return (
 		<Box component="div" sx={{ width: "100%" }}>
 			{/* Thumbnail Container */}

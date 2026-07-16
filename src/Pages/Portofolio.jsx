@@ -13,6 +13,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Certificate from "../components/Certificate";
 import { Code, Award, Boxes } from "lucide-react";
+import PHP from "../assets/Photos/Certificates/PHP.jpg";
+import MYSQL from "../assets/Photos/Certificates/MYSQL.jpg";
+import Laravel from "../assets/Photos/Certificates/Laravel.png";
 
 // Separate ShowMore/ShowLess button component
 const ToggleButton = ({ onClick, isShowingMore }) => (
@@ -162,13 +165,13 @@ export default function FullWidthTabs() {
   ];
   const certificates = [
     {
-      Img: "./Photos/Certificates/PHP.jpg",
+      Img: PHP,
     },
     {
-      Img: "./Photos/Certificates/MYSQL.jpg",
+      Img: MYSQL,
     },
     {
-      Img: "./Photos/Certificates/Laravel.png",
+      Img: Laravel,
     },
   ];
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -409,7 +412,7 @@ export default function FullWidthTabs() {
                 <ToggleButton
                   onClick={() => toggleShowMore("certificates")}
                   isShowingMore={showAllCertificates}
-                />
+                  />
               </div>
             )}
           </TabPanel>
@@ -419,26 +422,26 @@ export default function FullWidthTabs() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
                 {techStacks.map((stack, index) => (
                   <div
-                    key={index}
+                  key={index}
                     data-aos={
                       index % 3 === 0
-                        ? "fade-up-right"
+                      ? "fade-up-right"
                         : index % 3 === 1
                           ? "fade-up"
                           : "fade-up-left"
-                    }
-                    data-aos-duration={
-                      index % 3 === 0
-                        ? "1000"
-                        : index % 3 === 1
+                        }
+                        data-aos-duration={
+                          index % 3 === 0
+                          ? "1000"
+                          : index % 3 === 1
                           ? "1200"
                           : "1000"
-                    }
-                  >
+                        }
+                        >
                     <TechStackIcon
                       TechStackIcon={stack.icon}
                       Language={stack.language}
-                    />
+                      />
                   </div>
                 ))}
               </div>
